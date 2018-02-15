@@ -295,9 +295,10 @@ int fish(int pond[][5], int rows)
 int main(void)
 {
     // Teich Array deklarieren (größe 5x4, wie im Beispiel)
-    int pond[4][5];
+    const int rows = 4;
+    int pond[rows][5];
     // Teich Array initialisieren
-    if (initPond(pond, 4, 12))
+    if (initPond(pond, rows, 12))
     {
         printf("Fehler beim initialisieren des Teiches!");
         return 1;
@@ -310,7 +311,7 @@ int main(void)
             case Angeln:
             {
                 // Falls keine Fische mehr im Teich sind wird die Ausführung beendet.
-                if (!fish(pond, 4))
+                if (!fish(pond, rows))
                 {
                     printf("Alle Fische wurden gefangen!\n\n");
                     return 0;
@@ -319,7 +320,7 @@ int main(void)
             }
             case Suchen:
             {
-                search(pond, 4);
+                search(pond, rows);
                 break;
             }
             case Exit:

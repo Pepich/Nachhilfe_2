@@ -297,7 +297,11 @@ int main(void)
     // Teich Array deklarieren (größe 5x4, wie im Beispiel)
     int pond[4][5];
     // Teich Array initialisieren
-    initPond(pond, 4, 12);
+    if (initPond(pond, 4, 12))
+    {
+        printf("Fehler beim initialisieren des Teiches!");
+        return 1;
+    }
 
     while (1)
     {

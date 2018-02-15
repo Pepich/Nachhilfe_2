@@ -272,7 +272,7 @@ int fish(int pond[][5], int rows)
             {
                 pond[(int) i][(int) j] = 0;
                 done = 1;
-                printf("Fisch gefangen:!\n");
+                printf("Fisch gefangen!\n");
             }
         }
     }
